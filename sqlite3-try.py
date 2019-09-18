@@ -32,14 +32,12 @@ def dynamic_data_entry():
 
 
 def read_from_db():
-    
 
-# carate_table()
-# data_entry()
+    # carate_table()
+    # data_entry()
 
-
-# for i in range(10):
-#     dynamic_data_entry()
-#     time.sleep(1)
+    # for i in range(10):
+    #     dynamic_data_entry()
+    #     time.sleep(1)
 c.close()
 conn.commit()

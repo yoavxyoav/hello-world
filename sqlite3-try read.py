@@ -16,8 +16,6 @@ def carate_table():
 def data_entry():
     c.execute("INSERT INTO stuffToPlot VALUES(7654567, '2016-01-01', 'Python', 8)")
     conn.commit()  # saving
-    c.close()  # closing the cursor
-    conn.close()  # closing the connection
 
 
 def dynamic_data_entry():
@@ -32,14 +30,19 @@ def dynamic_data_entry():
 
 
 def read_from_db():
-    
+    c.execute("SELECT * FROM stuffToPlot")  # the cursor is now populated
+    # data = c.fetchall()  # getting everything at the cursor
+    # print(data)
+    for row in c.fetchall():
+        print(row)
+
 
 # carate_table()
 # data_entry()
 
-
 # for i in range(10):
 #     dynamic_data_entry()
 #     time.sleep(1)
+read_from_db()
 c.close()
 conn.commit()
